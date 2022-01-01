@@ -1,0 +1,36 @@
+---
+import Menu from '../components/menu.astro';
+import Footer from '../components/footer.astro';
+let title = 'Tutors Open Source Project | Branding & Style Guide';
+---
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href={Astro.resolve("../styles/tailwind.css")}> <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+</head>
+
+<body>
+    <div class="tutors-container">
+        <Menu />
+        <div class="unitcard-container">
+            <div class="card-body">
+                <h2 class="card-title">Tutors Design System - Branding & Style Guide</h2><br>
+                <div class="flex flex-wrap justify-center">
+                     <iframe src="/Brand-Guidelines.pdf" width="100%" height="750px" />
+                </div>
+            </div>
+        </div>
+        <Footer />
+    </div>
+</body>
+
+</html>
