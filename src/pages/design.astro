@@ -11,10 +11,7 @@ let title = 'Tutors Open Source Project | Design';
     <meta name="viewport" content="width=device-width">
     <title>{title}</title>
     <link rel="stylesheet" href="/style/global.css">
-  <style global>
-    @import '../styles/tailwind.css';
-  </style>
-    <link rel="preconnect"
+    <link rel="stylesheet" href={Astro.resolve("../styles/tailwind.css")}> <link rel="preconnect"
         href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -25,7 +22,7 @@ let title = 'Tutors Open Source Project | Design';
 <body>
     <div class="tutors-container">
         <Menu />
-        <div class="unitcard-container bg-base-200 rounded-box">
+        <div class="unitcard-container">
             <div class="card-body">
                 <h2 class="card-title">Tutors Design System</h2>
                 <div class="flex flex-wrap justify-center">
