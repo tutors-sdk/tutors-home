@@ -11,33 +11,87 @@ let title = 'Tutors Open Source Project';
   <meta name="viewport" content="width=device-width">
   <title>{title}</title>
   <link rel="stylesheet" href="/style/global.css">
-  <link rel="stylesheet" href={Astro.resolve("../styles/tailwind.css")}> <link rel="preconnect"
-    href="https://fonts.googleapis.com">
+  <style global>
+    @import '../styles/tailwind.css';
+  </style>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
 </head>
 
-<body>
+<body class="bg-base-100">
   <div class="tutors-container">
     <Menu />
-    <div class="card lg:card-side bg-base-200 mb-2">
-      <figure>
-        <img src="https://source.unsplash.com/YRMWVcdyhmI/540x280">
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Welcome to the website of the Tutors Open Source Project</h2>
-        <p>The Tutors Open Source Project is a collection of software packages developed to create and deliver online
-          courses, through lectures, labs, videos & course materials. It is currently used to run over 160 courses.</p>
-        <div class="card-actions">
-          <a href="https://tutors-project-site.netlify.app" target="_blank"><button class="btn btn-primary">View
-              Documentation</button></a>
-          <a href="https://github.com/tutors-sdk" target="_blank"><button class="btn btn-ghost">View On GitHub</button></a>
+    <div class="flex items-center w-full px-4 py-10 bg-cover card bg-base-200"
+      style="background-image:url('https://source.unsplash.com/x6sZagaUOM4/1920x1280')">
+      <div class="card glass text-gray-900">
+        <div class="card-body">
+          <h1 class="text-2xl"><strong>Tutors: An Open Learning Web Toolkit</strong></h1>
+          <p class="text-lg">A collection of open source components &amp; services supporting the creation of
+            transformative learning
+            experiences using open web standards.</p>
+          <div class="card-actions">
+            <a href="https://tutors-project-site.netlify.app" target="_blank"
+              class="btn btn-primary rounded-full">Explore</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="unitcard-container">
+    <div class="unitcard-container bg-base-200 rounded-box w-full mt-2">
+      <div class="card-body">
+        <p class="text-xl"><strong>The project supports three complimentary perspectives</strong></p><br>
+        <div class="flex flex-wrap justify-center">
+          <div class="tutorscard border-info w-80 p-4 pb-8">
+            <a href="https://reader.tutors.dev/#/lab/tutors-project-site.netlify.app/topic-03-DX/unit-0/book-plans/01" target="_blank">
+              <div class="tutorscard-header justify-center">
+                <h3 class="card-title text-md">The Learner Experience</h3>
+              </div>
+              <figure class="flex justify-center">
+                <span class="iconify" data-icon="ph:student" data-height="180"></span>
+              </figure>
+              <p>The <strong><em>Learner Experience</em></strong>
+                prioritises web interactions that are <strong>engaging</strong>, <strong>contextual</strong>,
+                <strong>linkable</strong>, <strong>searchable</strong>, <strong>accessible</strong> and
+                <strong>responsive</strong>. In addition the experience should foster a sense of
+                <strong>community</strong>
+                and <strong>connection</strong> among fellow learners.</p>
+            </a>
+          </div>
+          <div class="tutorscard border-warning w-80 p-4 pb-8">
+            <a href="https://reader.tutors.dev/#/lab/tutors-project-site.netlify.app/topic-03-DX/unit-0/book-plans/02" target="_blank">
+              <div class="tutorscard-header justify-center">
+                <h3 class="card-title text-md">The Educator Experience</h3>
+              </div>
+              <figure class="flex justify-center">
+                <span class="iconify" data-icon="ph:chalkboard-teacher" data-height="180"></span>
+              </figure>
+              <p>The <strong><em>Educator Experience</em></strong>
+                prioritises the creation of a <strong>guided paths</strong> through a curriculum
+                via the creation of learning materials that are <strong>autonomous</strong>, <strong>structurally
+                  aligned</strong>, <strong>composable</strong>, <strong>auditable</strong>,
+                <strong>extensible</strong>, <strong>versioned</strong> and <strong>independent</strong>.</p>
+            </a>
+          </div>
+          <div class="tutorscard border-error w-80 p-4 pb-8">
+            <a href="https://reader.tutors.dev/#/lab/tutors-project-site.netlify.app/topic-03-DX/unit-0/book-plans/03" target="_blank">
+              <div class="tutorscard-header justify-center">
+                <h3 class="card-title text-md">The Developer Experience</h3>
+              </div>
+              <figure class="flex justify-center">
+                <span class="iconify" data-icon="ant-design:code-outlined" data-height="180"></span>
+              </figure>
+              <p>The <strong><em>Developer Experience</em></strong>
+                prioritises the specification and implementation of <strong>robust</strong>, <strong>well
+                  documented</strong>, <strong>loosely
+                  coupled components &amp; services</strong>, integrated into a <strong>coherent toolkit</strong> open
+                to contributions from <strong>diverse skill sets</strong>.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="unitcard-container bg-base-200 rounded-box w-full mt-2">
       <div class="card-body">
         <h2 class="card-title">Contributors</h2>
         <div class="flex flex-wrap justify-center">
@@ -93,28 +147,27 @@ let title = 'Tutors Open Source Project';
               </div>
             </div>
           </a>
-            <div class="card text-center shadow-2xl bg-base-100 w-72 p-8 m-2">
-              <div>
-                <div class="avatar">
-                  <div class="rounded-full w-14 h-14 shadow"><img
-                      src=""></div>
-                </div>
-              </div>
-              <div>
-                <h2 class="card-title">Ellen O'Carrol</h2>
+          <div class="card text-center shadow-2xl bg-base-100 w-72 p-8 m-2">
+            <div>
+              <div class="avatar">
+                <div class="rounded-full w-14 h-14 shadow"><img src=""></div>
               </div>
             </div>
-            <div class="card text-center shadow-2xl bg-base-100 w-72 p-8 m-2">
-              <div>
-                <div class="avatar">
-                  <div class="rounded-full w-14 h-14 shadow"><img
-                      src="https://ca.slack-edge.com/TEL752280-UEN0YN2NT-a2e16b2824c2-192"></div>
-                </div>
-              </div>
-              <div>
-                <h2 class="card-title">Pete Windle</h2>
+            <div>
+              <h2 class="card-title">Ellen O'Carrol</h2>
+            </div>
+          </div>
+          <div class="card text-center shadow-2xl bg-base-100 w-72 p-8 m-2">
+            <div>
+              <div class="avatar">
+                <div class="rounded-full w-14 h-14 shadow"><img
+                    src="https://ca.slack-edge.com/TEL752280-UEN0YN2NT-a2e16b2824c2-192"></div>
               </div>
             </div>
+            <div>
+              <h2 class="card-title">Pete Windle</h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
